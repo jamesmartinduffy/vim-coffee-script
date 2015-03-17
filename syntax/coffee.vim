@@ -115,6 +115,10 @@ hi def link coffeeReservedError Error
 syn match coffeeObjAssign /@\?\%(\I\|\$\)\%(\i\|\$\)*\s*\ze::\@!/ contains=@coffeeIdentifier display
 hi def link coffeeObjAssign Identifier
 
+" James hack – highlight assignments
+syn match coffeeAssign /@\?\%(\I\|\$\)\%(\i\|\$\)*\ze\s*=\s*/ contains=@coffeeIdentifier display
+hi def link coffeeAssign Identifier
+
 syn keyword coffeeTodo TODO FIXME XXX contained
 hi def link coffeeTodo Todo
 
